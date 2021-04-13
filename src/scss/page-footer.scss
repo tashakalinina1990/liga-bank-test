@@ -1,0 +1,128 @@
+.page-footer {
+  flex-shrink: 0;
+  flex-basis: auto;
+  background-color: $light-gray;
+}
+
+.page-footer__wrapper {
+  @include centered-layout;
+
+  display: flex;
+  align-items: flex-start;
+
+  padding-top: 48px;
+  padding-bottom: 60px;
+}
+
+.page-footer__contacts-navigation,
+.page-footer__phone-contacts {
+  margin-right: 80px;
+}
+
+.page-footer__phones-and-socials {
+  display: flex;
+  align-items: flex-start;
+}
+
+.page-footer__phone-contacts {
+  position: relative;
+
+  &--mobile {
+    width: 196px;
+    padding-top: 10px;
+    padding-left: 29px;
+  }
+
+  &--base {
+    width: 155px;
+    padding-top: 9px;
+    padding-left: 33px;
+  }
+}
+
+.page-footer__phone {
+  display: flex;
+  margin-bottom: 1px;
+
+  font-weight: 500;
+  color: $black;
+
+  @include basic-hover;
+  @include basic-active;
+}
+
+.page-footer__mobile-phone-icon {
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+
+.page-footer__base-phone-icon {
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+
+.page-footer__phone-description {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 17px;
+  font-style: normal;
+  color: $faded-gray;
+}
+
+.page-footer__socials {
+  padding-top: 12px;
+}
+
+@media (max-width: $tablet-max-width) {
+  .page-footer__wrapper {
+    // TODO: move to mixin centered layout
+    width: 100%;
+
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  .page-footer__contacts-navigation {
+    margin-right: 102px;
+  }
+
+  .page-footer__phones-and-socials {
+    flex-direction: column;
+  }
+
+  .page-footer__phone-contacts {
+    margin-right: 0;
+    margin-bottom: 13px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .page-footer__wrapper {
+    flex-direction: column;
+
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 49px;
+    padding-left: 15px;
+  }
+
+  .page-footer__contacts-navigation {
+    margin-right: 0;
+  }
+
+  .page-footer__phone-contacts {
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin-bottom: 7px;
+    }
+  }
+
+  .page-footer__phone {
+    margin-bottom: 0;
+  }
+}
+
